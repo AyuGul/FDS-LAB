@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Sort extends MyLongArray {
+public class Sort extends MyLongArray3 {
     private long[] c;
 
     /**
@@ -14,7 +14,7 @@ public class Sort extends MyLongArray {
         z = size;
     }
 
-    public void initArray(MyLongArray m) {
+    public void initArray(MyLongArray3 m) {
         long[] c = new long[z];
         Random r = new Random();
         for (int i = 0; i < c.length; i++) {
@@ -32,9 +32,9 @@ public class Sort extends MyLongArray {
     /**
      * Sorts the elements in the array using the bubble sort algorithm.
      */
-    public void bubbleSort(MyLongArray m) {
+    public void bubbleSort(MyLongArray3 m) {
         c = new long[z];
-        m.geta(c); // get values from MyLongArray object
+        m.geta(c); // get values from MyLongArray3 object
         for (int i = 0; i < c.length - 1; i++) {
             for (int j = 1; j < c.length - i; j++) {
                 if (c[j - 1] > c[j]) {
@@ -52,7 +52,7 @@ public class Sort extends MyLongArray {
     /**
      * Sorts the elements in the array using the selection sort algorithm.
      */
-    public void selectionSort(MyLongArray m) {
+    public void selectionSort(MyLongArray3 m) {
         c = new long[z];
         m.geta(c);
         for (int i = 0; i < c.length; i++) {
@@ -74,7 +74,7 @@ public class Sort extends MyLongArray {
     /**
      * Sorts the elements in the array using the insertion sort algorithm.
      */
-    public void insertionSort(MyLongArray m) {
+    public void insertionSort(MyLongArray3 m) {
         c = new long[z];
         m.geta(c);
         for (int i = 1; i < c.length; i++) {

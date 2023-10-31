@@ -7,7 +7,7 @@ public class MyLongArray {
     private int currentIndex; // The current number of elements in the array
 
     /**
-     * Constructs an instance of MyLongArray with the specified size.
+     * Constructs an instance of MyLongArray3 with the specified size.
      *
      * @param size The size of the array.
      */

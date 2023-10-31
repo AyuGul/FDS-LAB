@@ -1,4 +1,4 @@
-package src;//public class Main {
+package src;//public class Main4 {
 //    public static void main(String[] args) {
 //        PositionalList<Integer> list = new PositionalList<>();
 //

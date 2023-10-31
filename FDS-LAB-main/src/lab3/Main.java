@@ -6,7 +6,7 @@ public class Main {
         boolean loop = true;
         System.out.print("Please enter size of array: ");
         int size = sc.nextInt();
-        MyLongArray arr = new MyLongArray(size);    //Creation of array
+        MyLongArray3 arr = new MyLongArray3(size);    //Creation of array
         Sort s = new Sort(size);
         System.out.println("Array created");
         while (loop) {                //Menu for array

@@ -1,5 +1,5 @@
 
-public class Main {
+public class Main4 {
 
     public static void reverseString(String s) {
         arrayStack<Character> st = new arrayStack<>(s.length());

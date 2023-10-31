@@ -3,7 +3,7 @@
 /**
  * Represents an array of type long with various functionalities.
  */
-public class MyLongArray {
+public class MyLongArray3 {
     private final long[] a; // The array to store long values
     private int currentIndex; // The current number of elements in the array
 
@@ -21,11 +21,11 @@ public class MyLongArray {
     }
 
     /**
-     * Constructs an instance of MyLongArray with the specified size.
+     * Constructs an instance of MyLongArray3 with the specified size.
      *
      * @param size The size of the array.
      */
-    public MyLongArray(int size) {
+    public MyLongArray3(int size) {
         a = new long[size];
 
         currentIndex = 0;
