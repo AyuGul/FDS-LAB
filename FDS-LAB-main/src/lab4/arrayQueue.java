@@ -52,11 +52,14 @@ public class arrayQueue<E> implements Queue<E> {
     private int size = 0;
 
     /**
-     * Constructor for creating an arrayQueue with a specified capacity.
+     * Constructor for creating an ArrayQueue with a specified capacity.
      *
-     * @param capacity The capacity of the arrayQueue.
+     * @param capacity The capacity of the ArrayQueue.
      */
-    public arrayQueue(int capacity) {
+    public ArrayQueue(int capacity) {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity must be greater than zero.");
+        }
         data = (E[]) new Object[capacity];
     }
 
@@ -70,13 +73,11 @@ public class arrayQueue<E> implements Queue<E> {
 
     public void enqueue(E e) {
         if (size == data.length) {
-            System.out.println("Full");
-            return;
+            throw new IllegalStateException("Queue is full. Cannot enqueue.");
         }
         rear = (rear + 1) % data.length;
         data[rear] = e;
         size++;
-
     }
 
     public E first() {
@@ -95,9 +96,9 @@ public class arrayQueue<E> implements Queue<E> {
         front = (front + 1) % data.length;
         size--;
         return out;
-
     }
 }
+
 
 class roundRobin {
     static class Task {
