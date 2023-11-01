@@ -55,6 +55,9 @@ public class arrayStack<E> implements Stack<E> {
      * @param capacity The capacity of the arrayStack.
      */
     public arrayStack(int capacity) {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException("Capacity must be greater than zero.");
+        }
         data = (E[]) new Object[capacity];
     }
 
@@ -67,12 +70,13 @@ public class arrayStack<E> implements Stack<E> {
     }
 
     public void push(E e) {
-        try {
-            data[++t] = e;
-        } catch (Exception x) {
-            --t;
-            System.out.println(x);
+        if (t + 1 == data.length) {
+            throw new IllegalStateException("Stack is full. Cannot push.");
         }
+        if (e == null) {
+            throw new IllegalArgumentException("Cannot push null onto the stack.");
+        }
+        data[++t] = e;
     }
 
     public E top() {
