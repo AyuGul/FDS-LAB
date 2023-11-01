@@ -56,7 +56,7 @@ public class arrayQueue<E> implements Queue<E> {
      *
      * @param capacity The capacity of the ArrayQueue.
      */
-    public ArrayQueue(int capacity) {
+    public arrayQueue(int capacity) {
         if (capacity <= 0) {
             throw new IllegalArgumentException("Capacity must be greater than zero.");
         }
