@@ -1,4 +1,5 @@
-package src;//public class Main4 {
+package src;
+//public class Main {
 //    public static void main(String[] args) {
 //        PositionalList<Integer> list = new PositionalList<>();
 //
@@ -37,6 +38,8 @@ package src;//public class Main4 {
 //        while (iterator.hasNext()) {
 //            System.out.println(iterator.next().getElement());
 //        }
+//
+//        System.out.println(list.first());
 //
 //    }
 //}
