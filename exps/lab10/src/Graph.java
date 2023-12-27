@@ -1,3 +1,4 @@
+package src;
 public interface Graph<V,E> {
 
     int numVertices();

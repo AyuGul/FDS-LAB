@@ -1,3 +1,4 @@
+package src;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -69,7 +70,7 @@ public class EdgeListGraph<V, E> implements Graph<V, E> {
 
     @Override
     public Iterable<Vertex<V>> vertices() {
-        return vertices;
+        return (Iterable<Vertex<V>>) vertices;
     }
 
     @Override
@@ -79,7 +80,7 @@ public class EdgeListGraph<V, E> implements Graph<V, E> {
 
     @Override
     public Iterable<Edge<E>> edges() {
-        return edges;
+        return (Iterable<Edge<E>>) edges;
     }
 
     private InnerVertex<V> validateV(Vertex<V> p) throws IllegalArgumentException {
@@ -171,7 +172,7 @@ public class EdgeListGraph<V, E> implements Graph<V, E> {
                 outgoingEdges.add(e);
             }
         }
-        return outgoingEdges;
+        return (Iterable<Edge<E>>) outgoingEdges;
     }
 
     @Override
@@ -184,7 +185,7 @@ public class EdgeListGraph<V, E> implements Graph<V, E> {
                 incomingEdges.add(e);
             }
         }
-        return incomingEdges;
+        return (Iterable<Edge<E>>) incomingEdges;
     }
 
     @Override

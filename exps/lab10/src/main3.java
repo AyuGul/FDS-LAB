@@ -1,9 +1,10 @@
+package src;
 import java.util.Scanner;
 
-public class Main {
+public class main3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        EdgeListGraph<String, Integer> graph = new EdgeListGraph<>(false);
+        AdgacencyMapGraph<String, Integer> graph = new AdgacencyMapGraph<>(false);
 
         while (true) {
             System.out.println("\nGraph Operations Menu:");
@@ -154,7 +155,7 @@ public class Main {
         }
     }
 
-    private static Vertex<String> findVertex(EdgeListGraph<String, Integer> graph, String element) {
+    private static Vertex<String> findVertex(AdgacencyMapGraph<String, Integer> graph, String element) {
     for (Vertex<String> vertex : graph.vertices()) {
         if (vertex.getElement().equals(element)) {
             return vertex;
@@ -164,7 +165,7 @@ public class Main {
     return null; // or throw an exception, depending on your preference
 }
 
-private static <V, E> Edge<E> findEdge(Graph<V, E> graph, Vertex<V> source, E edgeElement) {
+private static <V, E> Edge<E> findEdge(AdgacencyMapGraph<V, E> graph, Vertex<V> source, E edgeElement) {
     for (Edge<E> edge : graph.outgoingEdges(source)) {
         if (edge.getElement().equals(edgeElement)) {
             return edge;

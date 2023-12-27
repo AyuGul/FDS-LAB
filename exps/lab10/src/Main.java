@@ -1,9 +1,10 @@
+package src;
 import java.util.Scanner;
 
-public class Main2 {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        AdgacencyListGraph<String, Integer> graph = new AdgacencyListGraph<>(false);
+        EdgeListGraph<String, Integer> graph = new EdgeListGraph<>(false);
 
         while (true) {
             System.out.println("\nGraph Operations Menu:");
@@ -154,21 +155,24 @@ public class Main2 {
         }
     }
 
-    private static Vertex<String> findVertex(AdgacencyListGraph<String, Integer> graph, String element) {
-        for (Vertex<String> vertex : graph.vertices()) {
-            if (vertex.getElement().equals(element)) {
-                return vertex;
-            }
+    private static Vertex<String> findVertex(EdgeListGraph<String, Integer> graph, String element) {
+    for (Vertex<String> vertex : graph.vertices()) {
+        if (vertex.getElement().equals(element)) {
+            return vertex;
         }
-        throw new IllegalArgumentException("Vertex with element " + element + " not found in the graph.");
     }
-    private static <V, E> Edge<E> findEdge(Graph<V, E> graph, Vertex<V> source, E edgeElement) {
-        for (Edge<E> edge : graph.outgoingEdges(source)) {
-            if (edge.getElement().equals(edgeElement)) {
-                return edge;
-            }
+    System.out.println("Vertex with element " + element + " not found in the graph.");
+    return null; // or throw an exception, depending on your preference
+}
+
+private static <V, E> Edge<E> findEdge(Graph<V, E> graph, Vertex<V> source, E edgeElement) {
+    for (Edge<E> edge : graph.outgoingEdges(source)) {
+        if (edge.getElement().equals(edgeElement)) {
+            return edge;
         }
-        throw new IllegalArgumentException("Edge with element " + edgeElement + " not found from the source vertex " + source.getElement());
     }
+    System.out.println("Edge with element " + edgeElement + " not found from the source vertex " + source.getElement());
+    return null; // or throw an exception, depending on your preference
+}
 
 }

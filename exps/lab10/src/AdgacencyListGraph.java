@@ -1,3 +1,4 @@
+package src;
 import java.util.*;
 public class AdgacencyListGraph<V,E> implements Graph<V,E>{
     private class InnerVertex<V> implements Vertex<V> {
@@ -93,7 +94,7 @@ public class AdgacencyListGraph<V,E> implements Graph<V,E>{
 
     @Override
     public Iterable<Vertex<V>> vertices() {
-        return vertices;
+        return (Iterable<Vertex<V>>) vertices;
     }
 
 
@@ -114,7 +115,7 @@ public class AdgacencyListGraph<V,E> implements Graph<V,E>{
                 edges.add(edge);
             }
         }
-        return edges;
+        return (Iterable<Edge<E>>) edges;
     }
 
     @Override
@@ -169,7 +170,7 @@ public class AdgacencyListGraph<V,E> implements Graph<V,E>{
 
     @Override
     public Iterable<Edge<E>> outgoingEdges(Vertex<V> v) {
-        return validateV(v).getAdj();
+        return (Iterable<Edge<E>>) validateV(v).getAdj();
     }
 
     @Override
